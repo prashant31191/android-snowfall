@@ -7,20 +7,50 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg"
     tools:context="com.jetradarmobile.snowfall.sample.SnowfallActivity">
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
 
   <com.jetradarmobile.snowfall.SnowfallView
+      android:id="@+id/sfView"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      app:snowflakesNum="250"
-      app:snowflakeAlphaMin="150"
+      app:snowflakesNum="20"
+      app:snowflakeAlphaMin="200"
       app:snowflakeAlphaMax="255"
       app:snowflakeAngleMax="5"
       app:snowflakeSizeMin="8dp"
       app:snowflakeSizeMax="32dp"
-      app:snowflakeSpeedMin="4"
-      app:snowflakeSpeedMax="12"
-      app:snowflakesFadingEnabled="true"
+      app:snowflakeSpeedMin="2"
+      app:snowflakeSpeedMax="8"
+      app:snowflakesFadingEnabled="false"
       app:snowflakesAlreadyFalling="false"
-      app:snowflakeImage="@drawable/snowflake"/>
+      app:snowflakeImage="@drawable/moon_18"/>
 
+    <com.jetradarmobile.snowfall.SnowfallView
+        android:id="@+id/sfView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:snowflakesNum="150"
+        app:snowflakeAlphaMin="100"
+        app:snowflakeAlphaMax="255"
+        app:snowflakeAngleMax="5"
+        app:snowflakeSizeMin="8dp"
+        app:snowflakeSizeMax="32dp"
+        app:snowflakeSpeedMin="2"
+        app:snowflakeSpeedMax="10"
+        app:snowflakesFadingEnabled="true"
+        app:snowflakesAlreadyFalling="true"
+        app:snowflakeImage="@drawable/snowflake"/>
+
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btnSetMaxSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Max speed"
+        />
+
+  </RelativeLayout>
 </FrameLayout>
